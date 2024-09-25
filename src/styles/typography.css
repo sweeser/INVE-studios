@@ -1,0 +1,31 @@
+body {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.typography__h1 {
+    font-size: 100px;
+}
+
+.typography__h2 {
+    font-size: 50px;
+}
+
+.typography__h3 {
+    font-size: 36px;
+}
+
+.typography__h4 {
+    font-size: 28px;
+}
+
+.typography__text {
+    font-size: 27px;
+}
+
+.typography__rules {
+    font-size: 30px;
+}
+
+.typography__link {
+    font-size: 23px;
+}

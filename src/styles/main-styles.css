@@ -1,0 +1,22 @@
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  scroll-padding-top: 150px;
+}
+
+:root {
+  --text-color-light: rgb(0, 0, 0);
+  --text-color-dark: rgb(255, 255, 255);
+  --purple-color: rgb(225, 12, 133);
+  --bg-color-light: rgb(255, 255, 255);
+  --bg-color-dark: rgb(0, 0, 0);
+}
+
+.main, .members__title, .card__title, .card__link, .discord__title, .discord-rules__title, .join__title, .form-button {
+  transition: background-color 1.0s ease, color 1.0s ease;
+}
+
+.main {
+  padding-top: 150px;
+}
+

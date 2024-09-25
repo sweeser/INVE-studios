@@ -1,0 +1,85 @@
+.join__title {
+    text-align: center;
+    color: var(--text-color-light);
+    text-decoration: underline;
+    text-decoration-color: var(--purple-color);
+    text-decoration-thickness: 3px;
+    text-underline-offset: -7px;
+    text-underline-position: under;
+    animation: text-reveal-bottom 3s;
+}
+
+.join {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.join__title {
+    padding-bottom: 15px;
+}
+
+.join-form {
+    font-size: 25px;
+    width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.text-field {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.text-field:last-child {
+    margin-bottom: 0;
+}
+
+.text-field__label {
+    display: block;
+}
+
+.text-field__input {
+    display: block;
+    width: 300px;
+    resize: none;
+}
+
+.form-buttons {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 2px;
+    box-sizing: border-box;
+    border: none; 
+    outline: none;
+    font-family: Bebas Neue;
+    font-size: 25px;
+}
+
+.form-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: var(--purple-color);
+    text-underline-offset: 3px;
+    text-underline-position: under;
+    transition: text-decoration 1s 1s;
+    transition: text-decoration-color 1s;
+}
