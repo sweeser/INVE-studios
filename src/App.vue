@@ -1,9 +1,6 @@
 <template>
-  <div :class="theme" id="app">
-    <HeaderComponent 
-      :setLightTheme="setLightTheme" 
-      :setDarkTheme="setDarkTheme" 
-      :theme="theme" />
+  <div id="app">
+    <HeaderComponent />
     <MainComponent>
       <MembersComponent />
       <DiscordComponent />
@@ -53,13 +50,6 @@ export default {
 </style>
 
 <style>
-html, body {
-  overflow: hidden; /* Полностью убираем скролл-бар со страницы */
-  margin: 0; /* Убираем отступы по краям страницы */
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
 
 #app {
   height: 100%;

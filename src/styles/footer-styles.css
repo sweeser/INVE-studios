@@ -7,7 +7,7 @@
 }
 
 .footer, .navigation__item-link {
-    transition: background-color 1.0s ease, color 1.0s ease; /* Плавный переход */
+    transition: background-color 1.0s ease, color 1.0s ease;
 }
 
 .footer {

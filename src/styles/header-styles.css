@@ -19,7 +19,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 10px 35px;
+    padding: 10px 10px;
 }
 
 .header__logo {
@@ -128,8 +128,16 @@
     background-color: var(--bg-color-light);
 }
 
+.light-text {
+    color: var(--text-color-light);
+}
+
 .dark-header {
     background-color: var(--bg-color-dark);
+}
+
+.dark-text {
+    color: var(--text-color-dark);
 }
 
 @keyframes reveal-top {
