@@ -1,0 +1,77 @@
+@import './variables.scss';
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+
+    &__image {
+        height: 500px;
+        aspect-ratio: 3 / 4;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    &__title {
+        text-align: center;
+        vertical-align: middle;
+        color: $text-color-light;
+        padding-top: 50px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        padding-top: 20px;
+    }
+
+    &__title_small {
+        padding-top: 20px;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        color: $text-color-light;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $bg-color-light;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-out, background-color 0.5s ease-out;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+            background-color: $purple-color;
+        }
+    }
+}

@@ -27,4 +27,4 @@ export default {
 };
 </script>
 
-<style src="@/styles/discord-styles.css"></style>
+<style lang="scss" src="@/styles/DiscordComponent.scss"></style>

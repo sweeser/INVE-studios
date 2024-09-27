@@ -1,0 +1,185 @@
+@import './variables.scss';
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    transition: background-color 1.0s ease, color 1.0s ease;
+
+    &__logo {
+        display: block;
+        height: 100px;
+        padding-right: 500px;
+        animation: reveal-left 2s;
+    }
+
+    &__title {
+        text-align: center;
+        color: $text-color-light;
+        padding-right: 200px;
+        animation: reveal-top 2s;
+    }
+}
+
+.navigation {
+    padding-right: 225px;
+    animation: reveal-top 2s;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    &__item {
+        padding: 10px;
+    }
+
+    &__item-link {
+        display: block;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        font-size: 22px;
+        color: $text-color-light;
+        transition: background-color 1.0s ease, color 1.0s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $bg-color-light;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-out, background-color 0.5s ease-out;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+            background-color: $purple-color;
+        }
+    }
+}
+
+.theme-switcher {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &__button {
+        display: block;
+        width: 32px;
+        height: 32px;
+        border: 1px solid $purple-color;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: switcher-bounce 2s ease-out forwards;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+
+        &-type-light {
+            background-image: url("@/assets/sun.svg");
+            animation: dark-button-roll 2s ease-out forwards;
+        }
+
+        &-type-dark {
+            background-image: url("@/assets/moon.svg");
+            animation: light-button-roll 2s ease-out forwards;
+        }
+    }
+}
+
+.active {
+    background-color: $purple-color;
+}
+
+.light-header {
+    background-color: $bg-color-light;
+}
+
+.light-text {
+    color: $text-color-light;
+}
+
+.dark-header {
+    background-color: $bg-color-dark;
+}
+
+.dark-text {
+    color: $text-color-dark;
+}
+
+@keyframes reveal-top {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes reveal-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes dark-button-roll {
+    0% {
+        transform: translateX(-200px) rotate(-360deg);
+        animation-timing-function: ease-in;
+    }
+    70% {
+        transform: translateX(5px) rotate(-20deg);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes light-button-roll {
+    0% {
+        transform: translateX(200px) rotate(360deg);
+        animation-timing-function: ease-in;
+    }
+    70% {
+        transform: translateX(-5px) rotate(20deg);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+        animation-timing-function: ease-out;
+    }
+}

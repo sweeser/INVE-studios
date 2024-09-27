@@ -1,0 +1,60 @@
+@import './variables.scss';
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    background-color: $bg-color-light;
+    color: $text-color-light;
+    transition: background-color 1.0s ease, color 1.0s ease;
+}
+
+.navigation {
+    padding-right: 225px;
+    animation: reveal-top 2s;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    &__item {
+        padding: 10px;
+    }
+
+    &__item-link {
+        display: block;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        font-size: 22px;
+        color: $text-color-light;
+        transition: background-color 1.0s ease, color 1.0s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $bg-color-light;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-out, background-color 0.5s ease-out;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+            background-color: $purple-color;
+        }
+    }
+}

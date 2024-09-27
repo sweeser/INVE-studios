@@ -58,4 +58,4 @@ export default {
 };
 </script>
 
-<style src="@/styles/header-styles.css"></style>
+<style lang="scss" scoped src="@/styles/HeaderComponent.scss"></style>

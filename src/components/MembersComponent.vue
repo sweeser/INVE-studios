@@ -151,9 +151,9 @@
 
 <script>
 export default {
-    name: 'MembersComponent'
+  name: 'MembersComponent'
 };
 </script>
 
-<style src="@/styles/members-styles.css"></style>
-<style src="@/styles/card.css"></style>
+<style lang="scss" src="@/styles/MembersComponent.scss"></style>
+<style lang="scss" src="@/styles/Card.scss"></style>

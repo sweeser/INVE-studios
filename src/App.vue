@@ -30,10 +30,17 @@ export default {
 }
 </script>
 
-<style src="@/styles/reset.css"></style>
-<style src="@/styles/typography.css"></style>
+<style lang="scss" src="@/styles/Reset.scss"></style>
+<style lang="scss" src="@/styles/typography.scss"></style>
 
 <style scoped>
+  #app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
   .main, .members__title, .card__title, .card__link, .discord__title, .discord-rules__title, .join__title, .form-button {
     transition: background-color 1.0s ease, color 1.0s ease;
   }
@@ -47,14 +54,4 @@ export default {
     color: var(--text-color-dark);
     background-color: var(--bg-color-dark);
   }
-</style>
-
-<style>
-
-#app {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
 </style>

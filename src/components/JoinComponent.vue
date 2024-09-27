@@ -33,8 +33,8 @@
 
 <script>
 export default {
-    name: 'JoinComponent'
+  name: 'JoinComponent'
 };
 </script>
 
-<style src="@/styles/join-styles.css"></style>
+<style lang="scss" src="@/styles/JoinComponent.scss"></style>
